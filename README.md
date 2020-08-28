@@ -17,10 +17,10 @@ The Phase 2 Data Pre-Processing is recommended for all sites before running the 
 ## Quality Control for Phase 2 Data
 
 The R library (`FourCePhase2Data`) in this repository contains functions that compare conduct quality control for the Phase 2 Data: 
-*1. comparing the summary statistics obtained from patient level Phase 2 data and the aggregated data from from Phase1.1.
-*2. comparing the number of patients across different fields
-*3. testing for lab unit issues
-*4. generate a word file for QC report
+-1. comparing the summary statistics obtained from patient level Phase 2 data and the aggregated data from from Phase1.1.
+-2. comparing the number of patients across different fields
+-3. testing for lab unit issues
+-4. generate a word file for QC report
 
 To get started, run the Docker container (https://github.com/covidclinical/Phase2.0_Docker_Analysis).
 
