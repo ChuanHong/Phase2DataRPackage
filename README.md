@@ -1,5 +1,5 @@
 # Phase2DataRPackage
-This repository contains R utility functions for 4CE Phase 2 Data Pre-Processing.
+This repository contains R utility functions for Phase 2 Data Pre-Processing for the 4CE Consortium.
 
 # Installation
 
@@ -11,19 +11,16 @@ devtools::install_github("https://github.com/ChuanHong/Phase2DataRPackage", subd
 
 # 4CE Phase 2 Data Pre-Processing Overview
 
-Every 4CE consortium Phase 2 project will be associated with 3 separate GitHub repositories.  One will contain the R code to implement the analysis,
-and two will be used to store and organize the results from the analyses.  The repositories will be named according to this convention:
-
-`Phase2[PROJECT_NAME]RPackage`: the repository that will contain the R code to run the project's analytics
-
-`Phase2[PROJECT_NAME]ResultsPerSite`: the repository where site-level data will be submitted
-
-`Phase2[PROJECT_NAME]AggregateResultsPerCountry`: the repository where country-level data will be stored
+The Phase 2 Data Pre-Processing is recommended for all sites before running the 4CE consortium Phase 2 project. The Phase 2 Data Pre-Processing consists of two parts: quality control and data cleaning. 
 
 
 ## Quality Control for Phase 2 Data
 
-The R library (`FourCePhase2Data`) in this repository contains functions that compare conduct quality control for the Phase 2 Data: comparing the summary statistics obtained from patient level Phase 2 data and the aggregated data from from Phase1.1.
+The R library (`FourCePhase2Data`) in this repository contains functions that compare conduct quality control for the Phase 2 Data: 
+*1. comparing the summary statistics obtained from patient level Phase 2 data and the aggregated data from from Phase1.1.
+*2. comparing the number of patients across different fields
+*3. testing for lab unit issues
+*4. generate a word file for QC report
 
 To get started, run the Docker container (https://github.com/covidclinical/Phase2.0_Docker_Analysis).
 
