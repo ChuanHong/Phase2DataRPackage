@@ -17,11 +17,21 @@ The Phase 2 Data Pre-Processing is recommended for all sites before running the 
 ## Quality Control for Phase 2 Data
 
 The R library (`FourCePhase2Data`) in this repository contains functions that compare conduct quality control for the Phase 2 Data: 
-1. **QC for patient-level Phase 2 data**: check if the summary statistics obtained from patient-level Phase 2 data is consistent with the aggreated results generated for Phase1.1 data.
-2. **QC for aggregated data**: 
-+ Demographics, 
-+ Medications and Diagnoses**: for each of the data type, check for the following critera: 1) if the number of all patients is greater than the number of patients before admission; 2) if the 
-+ Labs; testing for lab unit issues
+1. **QC for Phase 2 patient-level data**: check if the summary statistics obtained from Phase 2 patient-level data is consistent with the aggreated results generated for Phase1.1.
+2. **QC for Phase 2 summary statistics**: 
++ Demographics: in each demographic group, check 
++ + if there is missing demographic groups (e.g., missing age group); 
++ + if there is negative patient numbres or counts; 
++ + if the number of all patients is greater than the number of severe patients. 
++ Medications and Diagnoses**: check 
++ + if there is any codes not belong to the list of medclass or ICD10 codes; 
++ + if there is negative patient numbers or counts; 
++ + if the number of all patients is greater than the number of severe patients.
++ Labs: check
++ + if there is any labs not belong to the list of loinc codes;
++ + if there is negative patients nubmers; 
++ + if there is negative measures in the original scale;
++ + if the lab measures are consistently outside the confidence range.
 3. **generate a word file for QC report**
 
 To get started, run the Docker container (https://github.com/covidclinical/Phase2.0_Docker_Analysis).
