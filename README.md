@@ -102,7 +102,7 @@ Phase2Data_Covariates_Baseline=runData_Covariates_Baseline(phase2.cc, phase2.po,
 Phase2Data_EventTime=runData_EventTime(phase2.cc, output.dir)
 ```
 
-7. If all of this has worked correctly, you should be able to see the following files in the output directory:
+7. If all the above steps have worked correctly, you should be able to see the following files in the output directory:
 
 + Phase2QC_Tab_ClinicalCourse.csv
 + Phase2QC_Tab_Demographics.csv
@@ -111,9 +111,12 @@ Phase2Data_EventTime=runData_EventTime(phase2.cc, output.dir)
 + Phase2QC_Tab_Medications.csv
 + Phase2QC_Report.doc
 
-+ Phase2Data_Covariates_Baseline.csv
-+ Phase2Data_Diagnoses_Longitudinal.csv
-+ Phase2Data_EventTime.csv
 + Phase2Data_Labs_Longitudinal.csv
 + Phase2Data_Medications_Longitudinal.csv
++ Phase2Data_Diagnoses_Longitudinal.csv
++ Phase2Data_Covariates_Baseline.csv
++ Phase2Data_EventTime.csv
+
+
+
 
