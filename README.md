@@ -16,7 +16,7 @@ The Phase 2 Data Pre-Processing is recommended for all sites before running the 
 
 ## Quality Control for Phase 2 Data
 
-The R library (`FourCePhase2Data`) in this repository contains functions that compare conduct quality control for the Phase 2 Data: 
+The R library (`FourCePhase2Data`) in this repository contains functions that conduct quality control for the Phase 2 Data: 
 1. **QC for Phase 2 patient-level data**. We will check if the summary statistics obtained from Phase 2 patient-level data is consistent with the aggreated results generated for Phase1.1.
 2. **QC for Phase 2 summary statistics**. We will check the following critera: 
 + Demographics:  
@@ -36,7 +36,20 @@ The R library (`FourCePhase2Data`) in this repository contains functions that co
 + + if the number of severe patients in DailyCounts, ClinialCourse, and Demographic are consistent;
 + + if in any of Medications, Diagnoses or Labs, the number of patients with the code is greater than number of all patients. 
 + Lab units: check if the lab measures are consistently outside the confidence range.
-3. **generate a word file for QC report**
+3. **generate QC report**
+A QC report will be generated in word format. 
+
+
+## Data Cleaning for Phase 2 Data
+
+The R library (`FourCePhase2Data`) in this repository also contains functions for data clean, which generates data in specific formats to fit into different analyses:  
+1. **Longitudinal data for Labs**: days since admission 
+2. **Longitudinal data for Medications**: before and since admission 
+3. **Longitudinal data for Diagnoses**: before and since admission 
+4. **Baseline covariates**: demographic variables, lab measures at day 0, medications and diagnoses before admission. 
+5. **Time varying covariates**: to be added
+6. **Event time data**: for each event outcome (severe, deceased, and severe AND deceased), we derive observed event time, and the indicator of obsering the event. 
+
 
 To get started, run the Docker container (https://github.com/covidclinical/Phase2.0_Docker_Analysis).
 
