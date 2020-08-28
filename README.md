@@ -17,21 +17,25 @@ The Phase 2 Data Pre-Processing is recommended for all sites before running the 
 ## Quality Control for Phase 2 Data
 
 The R library (`FourCePhase2Data`) in this repository contains functions that compare conduct quality control for the Phase 2 Data: 
-1. **QC for Phase 2 patient-level data**: check if the summary statistics obtained from Phase 2 patient-level data is consistent with the aggreated results generated for Phase1.1.
-2. **QC for Phase 2 summary statistics**: 
-+ Demographics: in each demographic group, check 
+1. **QC for Phase 2 patient-level data**. We will check if the summary statistics obtained from Phase 2 patient-level data is consistent with the aggreated results generated for Phase1.1.
+2. **QC for Phase 2 summary statistics**. We will check the following critera: 
++ Demographics:  
 + + if there is missing demographic groups (e.g., missing age group); 
 + + if there is negative patient numbres or counts; 
-+ + if the number of all patients is greater than the number of severe patients. 
-+ Medications and Diagnoses**: check 
-+ + if there is any codes not belong to the list of medclass or ICD10 codes; 
++ + if there is number of all patients less than the number of severe patients. 
++ Medications and Diagnoses:
++ + if there is any code not belong to the list of medclass or ICD10; 
 + + if there is negative patient numbers or counts; 
 + + if the number of all patients is greater than the number of severe patients.
-+ Labs: check
++ Labs: 
 + + if there is any labs not belong to the list of loinc codes;
 + + if there is negative patients nubmers; 
-+ + if there is negative measures in the original scale;
-+ + if the lab measures are consistently outside the confidence range.
++ + if there is negative measures in the original scale.
++ Cross over comparison: 
++ + if the number of patients in DailyCounts, ClincalCourse, and Demographic are consistent; 
++ + if the number of severe patients in DailyCounts, ClinialCourse, and Demographic are consistent;
++ + if in any of Medications, Diagnoses or Labs, the number of patients with the code is greater than number of all patients. 
++ Lab units: check if the lab measures are consistently outside the confidence range.
 3. **generate a word file for QC report**
 
 To get started, run the Docker container (https://github.com/covidclinical/Phase2.0_Docker_Analysis).
