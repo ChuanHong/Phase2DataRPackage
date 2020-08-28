@@ -92,7 +92,7 @@ Phase2QC_Tab_Demographic=runQC_tab_dem(phase2.ps, phase2.po, phase1.dem, output.
 Phase2QC_Tab_ClinicalCourse=runQC_tab_cc(phase2.cc, phase1.cc, output.dir)
 runQC_report(phase1.dc,phase1.cc, phase1.dem,phase1.diag, phase1.lab, phase1.med, output.dir,site.nm="MGB")
 ```
-<span style="color:red"> If there is any issue identified in Step 5, please fix the issue first before going to Step 6.
+<span style="color:red"> If there is any issue identified in Step 5, please fix the issue first before going to Step 6.</span>
 
 6. Data Cleaning.
 ``` R
